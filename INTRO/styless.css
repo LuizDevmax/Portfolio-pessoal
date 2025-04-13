@@ -1,0 +1,363 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #111;
+    color: #fff;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  
+  /* Seção hero (início) */
+  .hero {
+    padding-top: 60px;
+    height: 100vh;
+    background: url('img/max-duzij-qAjJk-un3BI-unsplash.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-top: 1rem;
+  }
+  
+  /* Outras seções */
+  section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* Animação */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.8);
+    padding: 1rem 2rem;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+  }
+  
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #00ffe7;
+  }
+
+  #projetos {
+    padding: 5rem 2rem;
+    background-color: #1a1a1a;
+    text-align: center;
+  }
+  
+  .projetos-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .cards-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background-color: #222;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+  }
+  
+  .card h3 {
+    color: #00ffe7;
+    margin-bottom: 1rem;
+  }
+  
+  .card p {
+    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card a {
+    color: #00ffe7;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  
+  #sobre {
+    background-color: #1c1c1c;
+    padding: 5rem 2rem;
+    animation: fadeIn 1.5s ease-in;
+  }
+  
+  .sobre-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .sobre-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #00ffe7;
+  }
+  
+  .sobre-container p {
+    font-size: 1.2rem;
+    color: #ccc;
+    line-height: 1.8;
+  }
+  
+  #contato {
+    background-color: #111;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  
+  .contato-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  #form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  #form-contato input,
+  #form-contato textarea {
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #1c1c1c;
+    color: #fff;
+  }
+  
+  #form-contato textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  #form-contato button {
+    padding: 1rem;
+    background-color: #00ffe7;
+    color: #111;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #form-contato button:hover {
+    background-color: #00cbbd;
+  }
+  
+  .mensagem-sucesso {
+    margin-top: 1rem;
+    color: #00ffe7;
+    font-weight: bold;
+    display: none;
+  }
+
+  #contato-redes {
+    background-color: #111;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  #contato-redes h2 {
+    font-size: 2.5rem;
+    color: #00ffe7;
+  }
+  
+  #contato-redes p {
+    color: #ccc;
+    margin-bottom: 2rem;
+  }
+  
+  .redes-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .redes-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #00ffe7;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .redes-links a:hover {
+    transform: scale(1.1);
+  }
+  
+  .redes-links img {
+    width: 24px;
+    height: 24px;
+  }
+
+  footer {
+    background-color: #1a1a1a;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  #tecnologias {
+    background-color: #1c1c1c;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  
+  .tech-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .tech-container h2 {
+    font-size: 2.5rem;
+    color: #00ffe7;
+    margin-bottom: 2rem;
+  }
+  
+  .tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .tech {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ccc;
+  }
+  
+  .tech img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .tech img:hover {
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1.2rem;
+      padding: 0 1rem;
+    }
+  
+    .tech-icons {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+  
+    .tech img {
+      width: 50px;
+      height: 50px;
+    }
+  
+    section {
+      padding: 3rem 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .tech span {
+      font-size: 0.9rem;
+    }
+  }
+  
+  .email-link {
+    color: #00ffe7;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 0.5rem;
+  }
+  
+  .email-link:hover {
+    color: #1e90ff;
+  }
+  
+  
+  
+  
